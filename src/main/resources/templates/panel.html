@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel</title>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+<div class="container">
+    <br><br><br>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <p class="text-center">Bievenido De Vuelta Administrador <strong th:text="${usuario}"></strong> :)</p>
+        </div>
+        <div class="col-md-2">
+            <form th:action="@{/logout}" method="post">
+                <input type="submit" value="Cerrar Session" class="btn btn-info">
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <img th:src="@{/img/admin.jpg}" alt="administracion" class="img-thumbnail">
+        </div>
+    </div>
+</div>
+</body>
+</html>
